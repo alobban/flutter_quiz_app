@@ -1,3 +1,4 @@
+import 'package:adv_basics/questions_summary.dart';
 import 'package:flutter/material.dart';
 
 import 'package:adv_basics/data/questions.dart';
@@ -14,7 +15,7 @@ class ResultsScreen extends StatelessWidget {
       summary.add({
         'question_index': i,
         'question': questions[i].text,
-        'answer': questions[i].answers[0],
+        'correct_answer': questions[i].answers[0],
         'user_answer': chosenAnswers[i],
       });
     }
@@ -35,7 +36,7 @@ class ResultsScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Text('List of answers and questions'),
+            QuestionsSummary(getSummaryData()),
             const SizedBox(
               height: 30,
             ),
