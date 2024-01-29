@@ -5,7 +5,11 @@ import 'package:adv_basics/data/questions.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key, required this.chosenAnswers, required this.onRestartQuiz,});
+  const ResultsScreen({
+    super.key,
+    required this.chosenAnswers,
+    required this.onRestartQuiz,
+  });
 
   final List<String> chosenAnswers;
   final void Function() onRestartQuiz;
